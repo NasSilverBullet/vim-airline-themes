@@ -2,12 +2,6 @@
 
 let s:gray     = [245, '#3f4b59']
 let s:darkgray = [245, '#1d1f21']
-let s:golden   = [143, '#BBE67E']
-let s:pink     = [131, '#F07178']
-let s:blue     = [ 67, '#D4BFFF']
-let s:orange   = [166, '#ffae57']
-let s:outerfg  = [ 16, '#8d96a1']
-let s:outerfgi = [ 16, '#2f3d4d']
 
 " Backgrounds
 let s:outerbg  = [ 16, 'NONE']
@@ -18,20 +12,20 @@ let s:N1 = [s:outerfg[1], s:outerbg[1], s:outerfg[0], s:gray[0]]
 let s:N3 = [s:gray[1]   , s:innerbg[1], s:gray[0]   , s:innerbg[0]]
 
 " Normal mode - modified
-let s:NM1 = [s:darkgray[1], s:orange[1], s:darkgray[0], s:orange[0]]
-let s:NM3 = [s:orange[1]  , s:outerbg[1], s:orange[0], s:darkgray[0]]
+let s:NM1 = [s:darkgray[1], s:gray[1], s:darkgray[0], s:gray[0]]
+let s:NM3 = [s:gray[1]  , s:outerbg[1], s:gray[0], s:darkgray[0]]
 
 " Insert mode
-let s:I1 = [s:darkgray[1], s:golden[1], s:outerfg[0], s:golden[0]]
-let s:I3 = [s:golden[1]  , s:innerbg[1], s:golden[0], s:innerbg[0]]
+let s:I1 = [s:darkgray[1], s:gray[1], s:outerfg[0], s:gray[0]]
+let s:I3 = [s:gray[1]  , s:innerbg[1], s:gray[0], s:innerbg[0]]
 
 " Visual mode
-let s:V1 = [s:darkgray[1], s:pink[1], s:outerfg[0], s:pink[0]]
-let s:V3 = [s:pink[1]    , s:innerbg[1], s:pink[0], s:innerbg[0]]
+let s:V1 = [s:darkgray[1], s:gray[1], s:outerfg[0], s:gray[0]]
+let s:V3 = [s:gray[1]    , s:innerbg[1], s:gray[0], s:innerbg[0]]
 
 " Replace mode
-let s:R1 = [s:darkgray[1], s:blue[1], s:outerfg[0], s:blue[0]]
-let s:R3 = [s:blue[1], s:innerbg[1], s:blue[0], s:innerbg[0]]
+let s:R1 = [s:darkgray[1], s:gray[1], s:outerfg[0], s:gray[0]]
+let s:R3 = [s:gray[1], s:innerbg[1], s:gray[0], s:innerbg[0]]
 
 " Inactive pane
 let s:IA = [s:darkgray[1], s:outerbg[1], s:innerbg[0], s:innerbg[0]]
