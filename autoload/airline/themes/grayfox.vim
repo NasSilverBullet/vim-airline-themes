@@ -1,5 +1,6 @@
-" Grayfox Airline - A Material Color Scheme
-"
+" Name: Grayfox
+" Maintainer: https://github.com/NasSilverBullet
+" Description:
 
 let s:theme = 'grayfox'
 
@@ -7,36 +8,22 @@ let s:theme = 'grayfox'
 "     let g:airline_grayfox_showmod = 1
 let s:want_showmod = get(g:, 'airline_grayfox_showmod', 0)
 
+ "  * [guifg, guibg, ctermfg, ctermbg, opts]
+ "
 function! airline#themes#{s:theme}#refresh()
-    if &background == "dark"
-        " Normal
-        let N1 = [ '#E4E4E4', '#3A3A3A', 254, 237 ]
-        let N2 = [ '#E4E4E4', '#4E4E4E', 254, 239 ]
-        let N3 = [ '#EEEEEE', '#262626', 255, 235 ]
+    " Normal
+    let N1 = [ '#E4E4E4', '#3A3A3A', 254, 237 ]
+    let N2 = [ '#E4E4E4', '#4E4E4E', 254, 239 ]
+    let N3 = [ '#EEEEEE', '#262626', 255, 235 ]
 
-        " Inactive
-        let IA = [ '#666666', N3[1], 242, N3[3] ]
+    " Inactive
+    let IA = [ '#666666', N3[1], 242, N3[3] ]
 
-        " Error
-        let ER = [ '#1C1C1C', '#D75F5F', 234, 167 ]
+    " Error
+    let ER = [ '#1C1C1C', '#D75F5F', 234, 167 ]
 
-        " Warning
-        let WI = [ ER[0], '#FFAF5F', ER[2], 215 ]
-    else
-        " Normal
-        let N1 = [ 'gray30', 'gray70', 235, 249 ]
-        let N2 = [ 'gray20', 'gray60', 233, 246 ]
-        let N3 = [ 'gray20', 'gray80', 233, 251 ]
-
-        " Inactive
-        let IA = [ 'gray15', N3[1], 244, N3[3] ]
-
-        " Error
-        let ER = [ '#1C1C1C', '#D75F5F', 234, 167 ]
-
-        " Warning
-        let WI = [ ER[0], '#FFAF5F', ER[2], 215 ]
-    endif
+    " Warning
+    let WI = [ ER[0], '#FFAF5F', ER[2], 215 ]
 
     " Terminal
     let TE = [ ER[0], N1[1], N1[2], N1[3] ]
@@ -72,9 +59,6 @@ function! airline#themes#{s:theme}#refresh()
     endif
 
     let g:airline#themes#{s:theme}#palette = palette
-
-    highlight airline_c  ctermbg=NONE guibg=NONE
-    highlight airline_tabfill ctermbg=NONE guibg=NONE
 endfunction
 
 call airline#themes#{s:theme}#refresh()
