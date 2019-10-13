@@ -12,9 +12,9 @@ let s:want_showmod = get(g:, 'airline_grayfox_showmod', 0)
  "
 function! airline#themes#{s:theme}#refresh()
     " Normal
-    let N1 = [ '#E4E4E4', '#3A3A3A', 254, 237 ]
-    let N2 = [ '#E4E4E4', '#4E4E4E', 254, 239 ]
-    let N3 = [ '#EEEEEE', '#262626', 255, 235 ]
+    let N1 = [ '#E4E4E4', '#3A3A3A', 254, NONE ]
+    let N2 = [ '#E4E4E4', '#4E4E4E', 254, NONE ]
+    let N3 = [ '#EEEEEE', '#262626', 255, NONE ]
 
     " Inactive
     let IA = [ '#666666', N3[1], 242, N3[3] ]
@@ -26,7 +26,7 @@ function! airline#themes#{s:theme}#refresh()
     let WI = [ ER[0], '#FFAF5F', ER[2], 215 ]
 
     " Terminal
-    let TE = [ ER[0], N1[1], N1[2], N1[3] ]
+    let TE = [ ER[0], N1[1], N1[2], NONE ]
 
     " Reverse
     let NR = [ N2[1], N2[0], N2[3], N2[2], 'bold' ]
